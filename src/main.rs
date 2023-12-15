@@ -1,12 +1,14 @@
 use std::env;
 
 mod day1;
+mod day2;
 mod util;
 
 fn pick_day(day: u8) {
     match day {
         1 => day1::solution(),
-        2..=24 => println!("Yet to be implemented"),
+        2 => day2::solution(),
+        3..=24 => println!("Yet to be implemented"),
         _ => (),
     }
 }
