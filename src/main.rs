@@ -1,6 +1,7 @@
 use std::env;
 
 mod day1;
+mod util;
 
 fn pick_day(day: u8) {
     match day {
