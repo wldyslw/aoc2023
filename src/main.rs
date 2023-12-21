@@ -4,7 +4,10 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 mod util;
+
+const LAST_DAY: u8 = 24;
 
 fn pick_day(day: u8) {
     match day {
@@ -12,9 +15,10 @@ fn pick_day(day: u8) {
         2 => day2::solution(),
         3 => day3::solution(),
         4 => day4::solution(),
-        5..=24 => println!("Yet to be implemented"),
+        5 => day5::solution(),
+        ..=LAST_DAY => println!("Yet to be implemented"),
         _ => (),
-    }
+    };
 }
 
 fn main() {
@@ -23,7 +27,7 @@ fn main() {
     match day {
         Some(day) => {
             let num = day.parse::<u8>().unwrap_or(0);
-            if num == 0 || num > 24 {
+            if num == 0 || num > LAST_DAY {
                 println!("Invalid day number");
             } else {
                 pick_day(num);
