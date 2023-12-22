@@ -5,6 +5,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 mod util;
 
 const LAST_DAY: u8 = 24;
@@ -16,6 +17,7 @@ fn pick_day(day: u8) {
         3 => day3::solution(),
         4 => day4::solution(),
         5 => day5::solution(),
+        6 => day6::solution(),
         ..=LAST_DAY => println!("Yet to be implemented"),
         _ => (),
     };
